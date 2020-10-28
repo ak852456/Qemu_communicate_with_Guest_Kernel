@@ -1,0 +1,21 @@
+1. qemu execute
+/qemu-5.0.0/accel/tcg/cpu-exec.c 	int cpu_exec()
+/qemu-5.0.0/accel/tcg/cpu-exec.c 	static inline TranslationBlock *tb_find()
+/qemu-5.0.0/accel/tcg/cpu-exec.c	static inline void cpu_loop_exec_tb()
+/qemu-5.0.0/accel/tcg/cpu-exec.c	static inline tcg_target_ulong cpu_tb_exec
+/qemu-5.0.0/tcg/tci.c				uintptr_t tcg_qemu_tb_exec()
+
+2. qemu memory tracing
+/qemu-5.0.0/accel/tcg/cpu-exec.c 			static inline TranslationBlock *tb_find()
+/qemu-5.0.0/accel/tcg/translate-all.c 		TranslationBlock *tb_gen_code()
+/qemu-5.0.0/accel/tcg/cputlb.c  			tb_page_addr_t get_page_addr_code()
+/qemu-5.0.0/accel/tcg/cputlb.c 				tb_page_addr_t get_page_addr_code_hostp()
+/qemu-5.0.0/accel/tcg/cputlb.c				static void tlb_fill()
+/qemu-5.0.0/target/i386/cpu.c 				cc->tlb_fill = x86_cpu_tlb_fill
+/qemu-5.0.0/target/i386/execp_helper.c 		bool x86_cpu_tlb_fill()
+/qemu-5.0.0/target/i386/execp_helper.c 		static int handle_mmu_fault()
+/qemu-5.0.0/target/i386/execp_helper.c		do_mapping:
+
+vaddr: guest virtual address
+    
+paddr: guest phsyical address
