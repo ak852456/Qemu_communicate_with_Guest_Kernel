@@ -11,3 +11,5 @@ using the pci device on guest kernel to simulate the created shered memory file.
 the running guest kernel version is "Ubuntu 14.04 LTS "Trusty Tahr".
 
 https://help.ubuntu.com/community/Installation/MinimalCD
+
+QEMU version is 5.0.0
